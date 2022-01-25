@@ -1,0 +1,12 @@
+{
+  "name": "filter-transactions",
+  "main": "app/index.js",
+  "author": "Devon Andrew Fazekas",
+  "scripts": {
+    "start": "npx functions-framework --source=app/ --target=filter_transactions --signature-type=http",
+    "deploy": "gcloud functions deploy --source=app/ filter-transactions --entry-point filter_transactions --trigger-http --runtime=nodejs16"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^2.1.0"
+  }
+}
